@@ -280,3 +280,163 @@ button { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* Account, checkout, saved-order, and manual-payment surfaces. */
+.account-main { padding-block: 25px 55px; }
+.account-page { padding-block: 8px 35px; }
+.account-header-main { min-height: 66px; }
+.account-header-nav { display: flex; align-items: center; gap: 15px; font-size: 11px; }
+.account-header-nav form { margin: 0; }
+.account-header-nav .text-link { border: 0; background: none; color: var(--blue); cursor: pointer; font: inherit; }
+.account-nav { display: flex; flex-wrap: wrap; gap: 7px; margin-block: 12px 17px; }
+.account-nav a { padding: 8px 10px; border: 1px solid var(--line); border-radius: 5px; background: #fff; color: #334155; font-size: 10px; font-weight: 700; }
+.account-nav a:hover { border-color: var(--blue); color: var(--blue); }
+.account-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.account-card { display: grid; gap: 5px; padding: 15px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--ink); }
+.account-card .material-symbols-outlined { color: var(--blue); }
+.account-card strong { font-size: 12px; }
+.account-card small { color: var(--muted); font-size: 10px; }
+.data-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.data-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 11px; }
+.data-table th, .data-table td { padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.data-table th { background: #f8fafc; color: #475569; font-size: 9px; text-transform: uppercase; letter-spacing: .05em; }
+.data-table tr:last-child td { border-bottom: 0; }
+.data-table small { color: var(--muted); font-size: 9px; }
+.status-message, .error-message { margin-block: 10px; padding: 11px 13px; border: 1px solid #bbf7d0; border-radius: 5px; background: #f0fdf4; color: #166534; font-size: 11px; }
+.error-message { border-color: #fecaca; background: #fef2f2; color: #991b1b; }
+.error-message ul { margin: 5px 0; padding-left: 20px; }
+.field-error { margin: 0; color: #b91c1c; font-size: 10px; }
+.auth-card { max-width: 490px; margin: 35px auto; padding: 23px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.auth-card h1 { margin: 0 0 8px; font: 800 22px 'Plus Jakarta Sans', sans-serif; }
+.auth-card > p { color: var(--muted); font-size: 11px; line-height: 1.6; }
+.auth-form { display: grid; gap: 12px; margin-top: 17px; }
+.auth-form label, .profile-form label { display: grid; gap: 6px; color: #475569; font-size: 11px; font-weight: 700; }
+.auth-form input, .profile-form input, .profile-form textarea { width: 100%; min-height: 40px; padding: 9px 10px; border: 1px solid #cbd5e1; border-radius: 5px; background: white; color: var(--ink); font: 400 12px 'Inter', sans-serif; }
+.auth-form .button { justify-self: start; }
+.profile-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.profile-form .field-wide, .profile-form > .button { grid-column: 1 / -1; }
+.checkout-page { padding-block: 10px 50px; }
+.checkout-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(280px, .8fr); align-items: start; gap: 18px; padding-block: 15px 35px; }
+.checkout-form-panel, .checkout-order-summary { padding: 20px; }
+.checkout-form-panel h2, .checkout-order-summary h2 { margin: 0 0 16px; font: 700 16px 'Plus Jakarta Sans', sans-serif; }
+.checkout-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+.checkout-form label { display: grid; align-content: start; gap: 6px; color: #475569; font-size: 11px; font-weight: 700; }
+.checkout-form input, .checkout-form select, .checkout-form textarea { width: 100%; min-height: 40px; padding: 9px 10px; border: 1px solid #cbd5e1; border-radius: 5px; background: #fff; color: var(--ink); font: 400 12px 'Inter', sans-serif; }
+.checkout-form textarea { resize: vertical; }
+.checkout-form .checkout-field-wide { grid-column: 1 / -1; }
+.checkout-form > .button { grid-column: 1 / -1; }
+.checkout-summary-items { display: grid; gap: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.checkout-summary-item { display: flex; justify-content: space-between; gap: 12px; color: #475569; font-size: 11px; }
+.checkout-summary-item span { min-width: 0; }
+.checkout-summary-item strong { white-space: nowrap; color: var(--ink); }
+.checkout-summary-item small { color: var(--muted); }
+.checkout-order-summary .summary-row { font-size: 12px; }
+.checkout-order-summary .summary-row strong { white-space: nowrap; }
+.checkout-payment-note { margin: 16px 0 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.order-status-strip { display: flex; flex-wrap: wrap; gap: 9px 20px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 5px; background: white; font-size: 11px; }
+.order-items-table { margin-block: 15px; }
+.order-lower-grid, .order-admin-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .7fr); gap: 14px; margin-block: 16px; }
+.order-lower-grid .checkout-panel, .order-admin-grid .checkout-panel { padding: 17px; }
+.order-lower-grid h2, .order-admin-grid h2, .admin-order-status-panel h2 { margin: 0 0 11px; font: 700 14px 'Plus Jakarta Sans', sans-serif; }
+.order-lower-grid p, .order-admin-grid p, .admin-order-status-panel p { color: #475569; font-size: 11px; line-height: 1.7; }
+.order-total-panel .summary-row { font-size: 11px; }
+.order-success-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.order-section-title { margin: 19px 0 9px; font: 700 15px 'Plus Jakarta Sans', sans-serif; }
+.admin-order-status-panel { margin-top: 18px; padding: 17px; }
+.order-status-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; gap: 12px; }
+.order-status-form label, .order-filter-form label { display: grid; gap: 5px; color: #475569; font-size: 10px; font-weight: 700; }
+.order-status-form input, .order-status-form select, .order-filter-form input, .order-filter-form select { min-height: 37px; padding: 7px 9px; border: 1px solid #cbd5e1; border-radius: 5px; background: white; color: var(--ink); font-size: 11px; }
+.order-filter-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); align-items: end; gap: 10px; padding: 14px; border: 1px solid var(--line); border-radius: 6px; background: white; }
+.catalog-pagination { margin-block: 14px; }
+.catalog-pagination nav { display: flex; justify-content: center; gap: 5px; }
+.admin-note { margin-top: 22px; }
+.checkout-layout .error-message { margin: 0; }
+@media (max-width: 760px) {
+    .checkout-layout { grid-template-columns: 1fr; }
+    .checkout-form { grid-template-columns: 1fr; }
+    .checkout-form .checkout-field-wide, .checkout-form > .button { grid-column: auto; }
+    .order-lower-grid, .order-admin-grid { grid-template-columns: 1fr; }
+    .order-status-form { grid-template-columns: 1fr; }
+    .auth-card { padding: 17px; }
+}
+/* Private manual-payment proof presentation. */
+.payment-panel-heading, .payment-proof-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.customer-payment-panel, .admin-payment-panel { margin-top: 18px; padding: 18px; }
+.customer-payment-panel h2, .admin-payment-panel h2 { margin: 3px 0 12px; font: 700 16px 'Plus Jakarta Sans', sans-serif; }
+.payment-state-badge, .payment-proof-heading > span { display: inline-flex; align-items: center; padding: 5px 9px; border-radius: 999px; background: #f1f5f9; color: #334155; font-size: 10px; font-weight: 700; text-transform: capitalize; }
+.payment-state-submitted { background: #fff7ed; color: #9a3412; }
+.payment-state-verified { background: #ecfdf5; color: #047857; }
+.payment-state-rejected { background: #fef2f2; color: #b91c1c; }
+.payment-instructions-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-block: 12px; }
+.payment-instructions-grid > div { display: grid; gap: 4px; padding: 10px; border: 1px solid var(--line); border-radius: 5px; }
+.payment-instructions-grid span { color: var(--muted); font-size: 10px; }
+.payment-instructions-grid strong { overflow-wrap: anywhere; color: var(--ink); font-size: 12px; }
+.payment-instructions-copy, .payment-state-message { color: #475569; font-size: 11px; line-height: 1.7; white-space: pre-line; }
+.payment-proof-form { display: grid; gap: 11px; margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--line); }
+.payment-proof-form h3 { margin: 0; font: 700 13px 'Plus Jakarta Sans', sans-serif; }
+.payment-proof-form p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.payment-proof-form label, .payment-reject-form label { display: grid; gap: 6px; color: #475569; font-size: 11px; font-weight: 700; }
+.payment-proof-form input:not([type=checkbox]), .payment-proof-form select, .payment-proof-form textarea, .payment-reject-form textarea { width: 100%; min-height: 39px; padding: 9px 10px; border: 1px solid #cbd5e1; border-radius: 5px; background: white; color: var(--ink); font: 400 12px 'Inter', sans-serif; }
+.payment-proof-form input[type=file] { padding: 7px; }
+.payment-proof-form textarea, .payment-reject-form textarea { resize: vertical; }
+.payment-proof-form .button { justify-self: start; }
+.payment-proof-card { display: grid; gap: 7px; margin-top: 12px; padding: 12px; border: 1px solid var(--line); border-radius: 5px; background: #f8fafc; }
+.payment-proof-card p { margin: 0; color: #475569; font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
+.payment-proof-card .text-link { width: fit-content; }
+.payment-rejection-reason { color: #991b1b !important; }
+.payment-review-actions { display: grid; grid-template-columns: minmax(150px, .5fr) minmax(250px, 1fr); align-items: start; gap: 14px; margin-top: 14px; }
+.payment-reject-form { display: grid; gap: 9px; }
+.payment-method-form-panel { max-width: 760px; }
+.payment-active-toggle { display: flex !important; grid-template-columns: auto 1fr !important; align-items: center; gap: 8px !important; }
+.payment-active-toggle input { width: 16px; height: 16px; }
+@media (max-width: 680px) {
+    .payment-instructions-grid, .payment-review-actions { grid-template-columns: 1fr; }
+    .payment-panel-heading { align-items: center; }
+}
+
+/* Phase six: coupon, review, and store settings controls use existing panel styling. */
+.checkout-coupon-box { display: grid; gap: 9px; margin-block: 13px; padding: 12px; border: 1px solid var(--line); border-radius: 6px; background: #f8fafc; }
+.checkout-coupon-box h3 { margin: 0; font: 700 12px 'Plus Jakarta Sans', sans-serif; }
+.coupon-apply-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 7px; }
+.coupon-apply-form input { min-width: 0; min-height: 38px; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 5px; background: white; color: var(--ink); font: 400 12px 'Inter', sans-serif; }
+.coupon-apply-form .button { min-height: 38px; padding-inline: 13px; }
+.coupon-remove-form { justify-self: start; }
+.product-reviews-section { padding-block: 28px 42px; }
+.product-reviews-section .section-heading { margin-bottom: 13px; }
+.approved-review-list, .admin-review-list { display: grid; gap: 11px; }
+.approved-review-card, .admin-review-card { padding: 15px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.approved-review-heading, .admin-review-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.approved-review-heading strong, .admin-review-header h2 { color: var(--ink); font: 700 13px 'Plus Jakarta Sans', sans-serif; }
+.approved-review-heading span, .admin-review-stars { color: #b45309; font-size: 12px; font-weight: 700; }
+.approved-review-card p, .admin-review-card blockquote { margin: 9px 0; color: #475569; font-size: 12px; line-height: 1.7; white-space: pre-line; }
+.approved-review-card small, .admin-review-card small { color: var(--muted); font-size: 10px; }
+.review-submit-panel { margin-top: 17px; padding: 17px; }
+.review-submit-panel h3 { margin: 0; font: 700 15px 'Plus Jakarta Sans', sans-serif; }
+.review-submit-panel > p { color: var(--muted); font-size: 11px; }
+.review-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; gap: 12px; }
+.review-form label, .review-moderation-form label { display: grid; gap: 6px; color: #475569; font-size: 11px; font-weight: 700; }
+.review-form input, .review-form select, .review-form textarea, .review-moderation-form textarea { width: 100%; min-height: 39px; padding: 9px 10px; border: 1px solid #cbd5e1; border-radius: 5px; background: #fff; color: var(--ink); font: 400 12px 'Inter', sans-serif; }
+.review-form textarea, .review-moderation-form textarea { resize: vertical; }
+.review-form .review-body-field, .review-form .field-error, .review-form .button { grid-column: 1 / -1; }
+.review-eligibility-note { margin-top: 13px; }
+.admin-review-card { margin-top: 2px; }
+.admin-review-header h2 { margin: 3px 0 5px; }
+.admin-review-header p { margin: 0; color: var(--muted); font-size: 10px; }
+.review-status { padding: 5px 9px; border-radius: 999px; background: #f1f5f9; color: #334155; font-size: 10px; font-weight: 700; }
+.review-status-approved { background: #ecfdf5; color: #047857; }
+.review-status-rejected { background: #fef2f2; color: #b91c1c; }
+.review-status-pending { background: #fff7ed; color: #9a3412; }
+.admin-review-card blockquote { padding-left: 12px; border-left: 2px solid var(--line); }
+.review-moderation-note { color: #9a3412; font-size: 11px; }
+.review-moderation-form { display: grid; gap: 9px; margin-top: 13px; padding-top: 12px; border-top: 1px solid var(--line); }
+.review-moderation-actions { display: flex; gap: 8px; }
+.settings-form-panel { max-width: 900px; padding: 20px; }
+.settings-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.settings-form > p, .settings-form > button { grid-column: 1 / -1; }
+.form-help { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+@media (max-width: 680px) {
+    .review-form, .settings-form { grid-template-columns: 1fr; }
+    .review-form .review-body-field, .review-form .field-error, .review-form .button, .settings-form > p, .settings-form > button { grid-column: auto; }
+    .admin-review-header { flex-direction: column; }
+    .product-reviews-section { padding-inline: 0; }
+}
